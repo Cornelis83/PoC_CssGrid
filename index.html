@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS Grid - split screen</title>
+		<style>
+			/* body, html {
+				margin: 0px;
+				max-height: 100%;
+				display: block;
+				box-sizing: border-box;
+			} */
+
+			.container {
+				height: 100%;
+				display: grid;
+				grid-template-rows: 100%;
+				grid-template-columns: auto 1fr;
+				grid-template-areas: 
+					'left-column right-column';
+			}
+
+			.container1 {
+				grid-area: left-column;
+			}
+				
+			.image {
+				height: 100%;
+			}
+			
+			.container2 {
+				grid-area: right-column;
+				background-color: blue;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="container1">
+				<img class="image" src="./egg.png" />
+			</div>
+			
+			<div class="container2">
+				
+			</div>
+		</div>
+	</body>
+</html>
